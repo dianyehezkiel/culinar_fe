@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   React.useEffect(() => {
     const fetchHello = async () => {
-      const { data } = await axios.get('http://culinar-ml.herokuapp.com')
+      const { data } = await axios.get('https://culinar-ml.herokuapp.com')
 
       setData(data)
     }
