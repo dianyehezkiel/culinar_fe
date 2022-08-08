@@ -2,27 +2,22 @@ import axios from 'axios'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import React from 'react'
 import styles from '../styles/Home.module.css'
 
-const defaultValue = {
-  data: "",
-  message: "",
-  status_code: 0,
+interface HomeProps {
+  data: string;
+  message: string;
+  status_code: number;
 }
 
-const Home: NextPage = () => {
-  const [data, setData] = React.useState(defaultValue)
+export async function getStaticProps() {
+  const { data } = await axios.get('https://culinar-ml.herokuapp.com')
 
-  React.useEffect(() => {
-    const fetchHello = async () => {
-      const { data } = await axios.get('https://culinar-ml.herokuapp.com')
-
-      setData(data)
-    }
-
-    fetchHello()
-  })
+  return {
+    props: {...data}
+  }
+}
+const Home: NextPage<HomeProps> = ({ data, message, status_code }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -38,9 +33,9 @@ const Home: NextPage = () => {
         <div className={styles.card}>
           <h2>API response</h2>
           <p className={styles.code}>
-            {`data: ${data.data}
-            message: ${data.message}
-            status_code: ${data.status_code}`}
+            {`data: ${data}
+            message: ${message}
+            status_code: ${status_code}`}
           </p>
         </div>
       </main>
