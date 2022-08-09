@@ -5,7 +5,11 @@ interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
-    <div className={`lg:container lg:mx-auto ${className}`}>{children}</div>
+    <div
+      className={`lg:container lg:mx-auto px-4 ${className}`}
+    >
+      {children}
+    </div>
   )
 }
 
