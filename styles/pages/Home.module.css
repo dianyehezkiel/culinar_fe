@@ -8,22 +8,6 @@
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -99,11 +83,6 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -112,14 +91,10 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .card,
-  .footer {
+  .card {
     border-color: #222;
   }
   .code {
     background: #111;
-  }
-  .logo img {
-    filter: invert(1);
   }
 }
