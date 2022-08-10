@@ -26,14 +26,14 @@
   }
 
   .drawerWrapper {
-    @apply inset-0 h-screen absolute top-0 overflow-hidden transition-transform duration-75;
+    @apply inset-0 h-screen fixed top-0 overflow-hidden transition-transform duration-75;
   }
 
   .drawerBlurSection {
-    @apply h-full bg-blue-600/50 backdrop-blur-md transition-opacity duration-150;
+    @apply h-full bg-blue-600/50 backdrop-blur-md cursor-pointer transition-opacity duration-150;
   }
 
   .drawer {
-    @apply relative ml-auto w-3/4 sm:w-1/2 h-full flex flex-col justify-start gap-4 p-4 pt-12 bg-blue-600 shadow-xl transition-transform duration-300;
+    @apply relative ml-auto w-3/4 sm:w-1/2 h-full flex flex-col justify-start gap-4 p-4 pt-12 bg-blue-600 shadow-xl cursor-default transition-transform duration-300;
   }
 }
