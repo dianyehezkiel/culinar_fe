@@ -50,12 +50,6 @@ const Home: NextPage<HomeProps> = ({ data, message, status_code }) => {
           </p>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="https://culinar.in" target="_blank" rel="noopener noreferrer">
-          Copyright 2022 Culinar<sup>&copy;</sup>
-        </a>
-      </footer>
     </Container>
   )
 }
