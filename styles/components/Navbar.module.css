@@ -2,11 +2,11 @@
 
 @layer components {
   .navbar {
-    @apply w-full bg-blue-600 sticky top-0 z-50 shadow-lg;
+    @apply w-full h-16 bg-softBlueCyan border-b border-black sticky top-0 z-50 shadow-lg;
   }
 
   .textLogo {
-    @apply text-2xl font-bold;
+    @apply cursor-pointer text-2xl font-bold;
   }
 
   .desktopMenu {
@@ -18,7 +18,7 @@
   }
 
   .iconButton {
-    @apply h-8 w-8 rounded-md border-blue-800 focus:border;
+    @apply h-8 w-8 rounded-md border-softBlue focus:border;
   }
 
   .iconButton svg {
@@ -30,10 +30,10 @@
   }
 
   .drawerBlurSection {
-    @apply h-full bg-blue-600/50 backdrop-blur-md cursor-pointer transition-opacity duration-150;
+    @apply h-full bg-softBlueCyan/50 backdrop-blur-md cursor-pointer transition-opacity duration-150;
   }
 
   .drawer {
-    @apply relative ml-auto w-3/4 sm:w-1/2 h-full flex flex-col justify-start gap-4 p-4 pt-12 bg-blue-600 shadow-xl cursor-default transition-transform duration-300;
+    @apply relative ml-auto w-3/4 sm:w-1/2 h-full flex flex-col justify-start gap-4 p-4 pt-12 bg-softBlueCyan shadow-xl cursor-default transition-transform duration-300;
   }
 }

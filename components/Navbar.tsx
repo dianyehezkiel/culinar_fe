@@ -18,8 +18,10 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={styles.navbar}>
-      <Container className="relative h-12 flex items-center justify-between">
-        <h1 className={styles.textLogo}>Culinar</h1>
+      <Container className="relative h-full flex items-center justify-between">
+        <Link href='/'>
+          <h1 className={styles.textLogo}>Culinar</h1>
+        </Link>
         <div className={styles.desktopMenu}>
           <Link href="/">
             <a>Home</a>

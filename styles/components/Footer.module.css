@@ -2,10 +2,10 @@
 
 @layer components {
   .footer {
-    @apply flex justify-center border border-t-gray-300 py-8;
+    @apply bg-white flex justify-center border border-t-gray-300 py-8;
   }
 
   .footer a {
-    @apply text-blue-600 hover:text-blue-800;
+    @apply text-softBlueCyan hover:text-softBlue;
   }
 }
