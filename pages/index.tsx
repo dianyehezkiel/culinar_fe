@@ -1,26 +1,14 @@
-import axios from 'axios'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
+import Card from '../components/Card'
 import Container from '../components/Container'
+import moods from '../mock/moods'
 import styles from '../styles/pages/Home.module.css'
 
-interface HomeProps {
-  data: string;
-  message: string;
-  status_code: number;
-}
-
-export async function getStaticProps() {
-  const { data } = await axios.get('https://culinar-ml.herokuapp.com')
-
-  return {
-    props: { ...data },
-  }
-}
-
-const Home: NextPage<HomeProps> = ({ data, message, status_code }) => {
+const Home: NextPage = () => {
   return (
-    <Container className='py-4'>
+    <div className='wrapperFull'>
       <Head>
         <title>Culinar</title>
         <meta
@@ -30,27 +18,34 @@ const Home: NextPage<HomeProps> = ({ data, message, status_code }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to{' '}
-          <a
-            href="https://culinar.in"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Culinar
-          </a>
-        </h1>
-        <div className={styles.card}>
-          <h2>API response</h2>
-          <p className={styles.code}>
-            {`data: ${data}
-            message: ${message}
-            status_code: ${status_code}`}
+      <Container className={styles.main}>
+        <div className={styles.headerWrapper}>
+          <div className={styles.titleWrapper}>
+            <h1 className={styles.title}>Culinar</h1>
+          </div>
+          <p className={styles.tagline}>
+            Restaurant recommendation based on your mood
           </p>
         </div>
-      </main>
-    </Container>
+        <div className={styles.moodListWrapper}>
+          <h2 className={styles.moodListInstruction}>
+            Start by choosing your current mood
+          </h2>
+          <div className={styles.moodList}>
+            {Object.keys(moods).map((mood) => (
+              <Link key={mood} href={`/moods/${mood}`}>
+                <div>
+                  <Card className={styles.moodCard}>
+                    <p className={styles.moodIcon}>{moods[mood]}</p>
+                    <p>{mood}</p>
+                  </Card>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </div>
   )
 }
 
