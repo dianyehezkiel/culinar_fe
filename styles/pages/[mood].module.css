@@ -1,0 +1,28 @@
+@tailwind components;
+
+@layer components {
+  .headerText {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .restoList {
+    @apply w-full my-8 flex flex-wrap gap-6 justify-center;
+  }
+
+  .cardImg {
+    @apply relative w-full overflow-hidden aspect-video rounded-t-md border border-black;
+  }
+
+  .cardRating {
+    @apply absolute px-1 bottom-2 right-2 flex gap-1 justify-between items-center
+    bg-softYellow border border-black rounded-full text-sm;
+  }
+
+  .cardTitle {
+    @apply text-left max-w-full bg-softCyan border border-black rounded-full px-2 self-start leading-normal line-clamp-1;
+  }
+
+  .cardDesc {
+    @apply text-left line-clamp-3 text-sm font-light;
+  }
+}
