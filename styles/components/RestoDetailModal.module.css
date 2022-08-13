@@ -37,6 +37,10 @@
     @apply relative w-full aspect-video rounded-lg border border-black overflow-hidden;
   }
 
+  .detailRating {
+    @apply flex items-center gap-1 absolute bottom-2 right-2 px-2 bg-softYellow border border-black rounded-full;
+  }
+
   .twoColTextWrapper {
     @apply w-full flex;
   }

@@ -53,7 +53,7 @@ const RestoDetailModal: React.FC<RestoDetailModalProps> = ({
                   src={restaurant?.image_url}
                   alt={`resto picture`}
                 />
-                <div className='flex items-center gap-1 absolute bottom-2 right-2 px-2 bg-softYellow border border-black rounded-full'>
+                <div className={styles.detailRating}>
                     <p className='text-lg'>{restaurant?.rating}</p>
                     <StarIcon className="w-5 h-5 fill-white" />
                 </div>
