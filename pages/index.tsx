@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Card from '../components/Card'
 import Container from '../components/Container'
-import moods from '../mock/moods'
+import { moods } from '../lib/constants'
 import styles from '../styles/pages/Home.module.css'
 
 const Home: NextPage = () => {
