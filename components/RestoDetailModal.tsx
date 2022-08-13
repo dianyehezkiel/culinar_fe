@@ -4,6 +4,12 @@ import { Restaurant } from '../types'
 import { classNames } from '../utils'
 import React from 'react'
 import ImageWithFallback from './ImageWithFallback'
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() => import("../components/Map"), {
+  loading: () => <h1>Loading...</h1>,
+  ssr: false,
+})
 
 interface RestoDetailModalProps {
   isOpen: boolean;
@@ -84,7 +90,9 @@ const RestoDetailModal: React.FC<RestoDetailModalProps> = ({
                   </p>
                 </div>
               </div>
-              <div className={styles.detailMap}></div>
+              <div className={styles.detailMap}>
+                <Map lon={restaurant?.longitude} lat={restaurant?.latitude} />
+              </div>
             </div>
           </div>
         </div>

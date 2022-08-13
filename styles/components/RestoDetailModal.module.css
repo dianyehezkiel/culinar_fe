@@ -54,7 +54,7 @@
   }
 
   .detailMap {
-    @apply w-full aspect-video bg-slate-400 rounded-lg border border-black;
+    @apply w-full aspect-video bg-slate-400 rounded-lg border border-black overflow-hidden;
   }
 }
 
