@@ -11,6 +11,9 @@ module.exports = {
       sans: ['Kanit', ...defaultTheme.fontFamily.sans],
     },
     extend: {
+      screens: {
+        xs: '360px',
+      },
       colors: {
         bgBlue: '#e5f0ff',
         softBlue: '#5b4dff',

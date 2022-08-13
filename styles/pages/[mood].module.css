@@ -23,6 +23,6 @@
   }
 
   .cardDesc {
-    @apply text-left line-clamp-3 text-sm font-light;
+    @apply self-start text-left line-clamp-3 text-sm font-light;
   }
 }
