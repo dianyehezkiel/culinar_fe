@@ -10,7 +10,7 @@
   }
 
   .modal {
-    @apply relative w-full xs:max-w-sm max-h-full bg-white rounded-2xl overflow-hidden border border-black overflow-hidden cursor-default z-50 transition-transform duration-300;
+    @apply relative w-full xs:max-w-sm max-h-full bg-white rounded-2xl overflow-hidden border border-black cursor-default z-50 transition-transform duration-300;
   }
 
   .titleBar {
