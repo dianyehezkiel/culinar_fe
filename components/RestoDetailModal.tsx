@@ -50,7 +50,7 @@ const RestoDetailModal: React.FC<RestoDetailModalProps> = ({
             <div className={styles.content}>
               <div className={styles.detailImage}>
                 <ImageWithFallback
-                  src={restaurant ? restaurant.image_url : ''}
+                  src={restaurant?.image_url}
                   alt={`resto picture`}
                 />
                 <div className='flex items-center gap-1 absolute bottom-2 right-2 px-2 bg-softYellow border border-black rounded-full'>
