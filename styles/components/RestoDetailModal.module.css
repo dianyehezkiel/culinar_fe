@@ -6,7 +6,7 @@
   }
 
   .modalBlurSection {
-    @apply flex items-center justify-center h-full w-full p-4 pt-20 bg-softBlueCyan/50 backdrop-blur-sm cursor-pointer transition-opacity duration-150;
+    @apply flex items-center justify-center h-full w-full p-4 pt-20 bg-softBlueCyan/30 backdrop-blur-sm cursor-pointer transition-opacity duration-150;
   }
 
   .modal {

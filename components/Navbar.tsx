@@ -29,6 +29,13 @@ const Navbar: React.FC = () => {
           <Link href="/about">
             <a>About</a>
           </Link>
+          <div className='w-max h-max bg-black rounded-full'>
+            <div className='flex-none bg-softYellowRed border border-black rounded-full transition-transform -translate-x-[2px] -translate-y-[2px] active:translate-x-0 active:translate-y-0'>
+              <Link href="/help-us">
+                <a className='px-2'>Help us</a>
+              </Link>
+            </div>
+          </div>
         </div>
         <div className={styles.mobileMenu}>
           <button className={styles.iconButton} onClick={openDrawer}>
@@ -60,6 +67,13 @@ const Navbar: React.FC = () => {
               <Link href="/about">
                 <a>About</a>
               </Link>
+              <div className='w-max h-max bg-black rounded-full'>
+                <div className='flex-none bg-softYellowRed border border-black rounded-full transition-transform translate-x-[2px] -translate-y-[2px] active:translate-x-0 active:translate-y-0'>
+                  <Link href="/help-us">
+                    <a className='px-2'>Help us</a>
+                  </Link>
+                </div>
+              </div>
               <button
                 className={`${styles.iconButton} absolute top-2 right-4`}
                 onClick={closeDrawer}

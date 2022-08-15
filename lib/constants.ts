@@ -13,3 +13,16 @@ export const moods: Moods = {
   "depressed": "😣",
   "angry": "😈",
 }
+
+export const foods = [
+  "burger",
+  "coffee and tea",
+  "seafood",
+  "sunda",
+  "korean",
+  "western",
+  "indonesian",
+  "italian",
+  "japanese",
+  "peranakan",
+]

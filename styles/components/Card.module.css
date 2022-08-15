@@ -3,7 +3,7 @@
 @layer components {
   .card {
     @apply flex-none flex flex-col rounded-md border items-center
-    transition-all duration-150 shadow-none border-black bg-white
+    transition-transform duration-150 shadow-none border-black bg-white
     -translate-x-1 -translate-y-1 active:translate-x-0 active:translate-y-0;
   }
 
