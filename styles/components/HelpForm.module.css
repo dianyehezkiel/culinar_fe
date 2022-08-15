@@ -2,7 +2,7 @@
 
 @layer components {
   .formWrapper {
-    @apply w-full md:w-1/2 self-start p-4 rounded-md bg-white border border-black;
+    @apply w-full md:w-1/2 p-4 rounded-md bg-white border border-black;
   }
 
   .form {

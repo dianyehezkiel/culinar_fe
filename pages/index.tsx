@@ -10,18 +10,13 @@ const Home: NextPage = () => {
   return (
     <div className='wrapperFull'>
       <Head>
-        <title>Culinar</title>
-        <meta
-          name="description"
-          content="culinar.in is restaurant recommendation app powered by machine learning."
-        />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Home | Culinar</title>
       </Head>
 
       <Container className={styles.main}>
         <div className={styles.headerWrapper}>
-          <div className={styles.titleWrapper}>
-            <h1 className={styles.title}>Culinar</h1>
+          <div className='logoWrapper'>
+            <h1 className='logo'>Culinar</h1>
           </div>
           <p className={styles.tagline}>
             Restaurant recommendation based on your mood
@@ -36,8 +31,10 @@ const Home: NextPage = () => {
               <Link key={mood} href={`/moods/${mood}`}>
                 <div>
                   <Card className={styles.moodCard}>
-                    <p className={styles.moodIcon}>{moods[mood]}</p>
-                    <p>{mood}</p>
+                    <p className={styles.moodIcon}>
+                      <i className={moods[mood]} />
+                    </p>
+                    <p className='text-sm md:text-base'>{mood}</p>
                   </Card>
                 </div>
               </Link>

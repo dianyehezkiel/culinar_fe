@@ -1,6 +1,7 @@
 import { StarIcon } from '@heroicons/react/outline'
 import axios from 'axios'
 import { GetServerSideProps, NextPage } from 'next'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Card from '../../components/Card'
@@ -60,6 +61,9 @@ const Mood: NextPage<MoodProps> = (props: MoodProps) => {
 
   return (
     <div className="wrapperFull">
+      <Head>
+        <title>Recommendation | Culinar</title>
+      </Head>
       <Container className="py-8 text-center">
         <h2 className={styles.headerText}>
           {`here are the best restaurants when you feel ${mood}`}

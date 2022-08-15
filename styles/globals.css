@@ -6,4 +6,12 @@
   .wrapperFull {
     min-height: calc(100vh - 3rem);
   }
+
+  .logoWrapper {
+    @apply w-max px-8 py-1 rounded-full bg-softGreen border border-black;
+  }
+
+  .logo {
+    @apply text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight;
+  }
 }

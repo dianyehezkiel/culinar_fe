@@ -9,14 +9,6 @@
     @apply my-8 mx-4 flex flex-col items-center text-center;
   }
 
-  .titleWrapper {
-    @apply w-max px-8 py-1 rounded-full bg-softGreen border border-black;
-  }
-
-  .title {
-    @apply text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight;
-  }
-
   .tagline {
     @apply text-lg sm:text-xl md:text-2xl;
   }
@@ -38,6 +30,6 @@
   }
 
   .moodIcon {
-    @apply text-4xl sm:text-5xl md:text-6xl mb-1 md:mb-2;
+    @apply text-5xl sm:text-6xl md:text-7xl;
   }
 }
