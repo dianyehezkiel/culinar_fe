@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+  .footer {
+    @apply bg-white flex justify-center border border-t-gray-300 py-8;
+  }
+
+  .footer a {
+    @apply text-softBlueCyan hover:text-softBlue;
+  }
+}

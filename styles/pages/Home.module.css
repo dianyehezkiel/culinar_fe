@@ -1,0 +1,35 @@
+@tailwind components;
+
+@layer components {
+  .main {
+    @apply py-4 flex flex-col justify-start items-center;
+  }
+
+  .headerWrapper {
+    @apply my-8 mx-4 flex flex-col items-center text-center;
+  }
+
+  .tagline {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .moodListWrapper {
+    @apply mb-8 text-center;
+  }
+
+  .moodListInstruction {
+    @apply mb-4 text-base font-medium;
+  }
+
+  .moodList {
+    @apply max-w-3xl grid grid-cols-3 gap-4 justify-center;
+  }
+
+  .moodCard {
+    @apply w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 justify-center cursor-pointer;
+  }
+
+  .moodIcon {
+    @apply text-5xl sm:text-6xl md:text-7xl;
+  }
+}

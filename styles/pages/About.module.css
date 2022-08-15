@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+  .imgFlexWrapper {
+    @apply flex flex-wrap justify-center gap-4 md:gap-8 mb-8;
+  }
+
+  .imgWrapper {
+    @apply relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full border-2 border-black overflow-hidden;
+  }
+
+  .link {
+    @apply text-softBlueCyan hover:text-softBlue;
+  }
+}
