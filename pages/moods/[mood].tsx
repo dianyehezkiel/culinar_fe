@@ -1,6 +1,6 @@
 import { StarIcon } from '@heroicons/react/outline'
 import axios from 'axios'
-import { GetServerSideProps, NextPage } from 'next'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -8,6 +8,7 @@ import Card from '../../components/Card'
 import Container from '../../components/Container'
 import ImageWithFallback from '../../components/ImageWithFallback'
 import RestoDetailModal from '../../components/RestoDetailModal'
+import { moods } from '../../lib/constants'
 import { toRestaurants } from '../../lib/utils'
 import styles from '../../styles/pages/[mood].module.css'
 import { Restaurant, RestaurantsFromApi } from '../../types'
@@ -16,9 +17,16 @@ type MoodProps = {
   [key: string]: Restaurant;
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { params } = context
+export const getStaticPaths: GetStaticPaths = () => {
+  const moodPaths = Object.keys(moods)
 
+  const paths = moodPaths.map((m) => {
+    return { params: { mood: m } }
+  })
+  return { paths, fallback: false }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data: dataFromApi } = await axios.post(
     'https://culinar-ml.herokuapp.com/find',
     params,
