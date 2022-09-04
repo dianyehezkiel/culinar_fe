@@ -12,6 +12,7 @@ import { moods } from '../../lib/constants'
 import { toRestaurants } from '../../lib/utils'
 import styles from '../../styles/pages/[mood].module.css'
 import { Restaurant, RestaurantsFromApi } from '../../types'
+import { api_base_url } from '../../lib/constants'
 
 type MoodProps = {
   [key: string]: Restaurant;
@@ -28,7 +29,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data: dataFromApi } = await axios.post(
-    'https://culinar-ml.herokuapp.com/find',
+    `${api_base_url}/find`,
     params,
   )
 

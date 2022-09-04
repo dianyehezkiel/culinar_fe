@@ -26,3 +26,5 @@ export const foods = [
   "japanese",
   "peranakan",
 ]
+
+export const api_base_url = process.env.API_BASE_URL

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { NextApiRequest, NextApiResponse } from 'next'
+import { api_base_url } from '../../lib/constants'
 
 interface PostFormRequest extends NextApiRequest {
   body: {
@@ -19,7 +20,7 @@ export default async function postForm(
       'favorite_food' in req.body &&
       typeof req.body.favorite_food === 'string'
     ) {
-      await axios.post('https://culinar-ml.herokuapp.com/post_form', {
+      await axios.post(`${api_base_url}/post_form`, {
         ...req.body,
       })
       res.json({ message: 'success' })
